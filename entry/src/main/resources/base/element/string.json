@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "navDestination_width",
+      "value": "100%"
+    },
+    {
+      "name": "navDestination_height",
+      "value": "100%"
+    },
+    {
+      "name": "title",
+      "value": "Exchange Rate"
+    },
+    {
+      "name": "sub_title",
+      "value": "Exchange rates are for reference only"
+    },
+    {
+      "name": "update",
+      "value": "Update"
+    },
+    {
+      "name": "updated",
+      "value": "Just updated"
+    },
+    {
+      "name": "reference",
+      "value": "Reference market exchange rate"
+    },
+    {
+      "name": "search",
+      "value": "Search Currency"
+    },
+    {
+      "name": "blank",
+      "value": "Blank Functionality"
+    },
+    {
+      "name": "splash_text",
+      "value": "Currency Converter"
+    },
+    {
+      "name": "enter",
+      "value": "Enter Value"
+    },
+    {
+      "name": "w_100",
+      "value": "100%"
+    }
+  ]
+}

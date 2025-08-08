@@ -1,0 +1,48 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "inputBackground",
+      "value": "#2050E0"
+    },
+    {
+      "name": "search_placeholder",
+      "value": "#848486"
+    },
+    {
+      "name": "search_font",
+      "value": "#848486"
+    },
+    {
+      "name": "updated_font",
+      "value": "#888888"
+    },
+    {
+      "name": "update_font",
+      "value": "#ffffffff"
+    },
+    {
+      "name": "updated_bg",
+      "value": "#F0F0F0"
+    },
+    {
+      "name": "update_bg",
+      "value": "#ff518ec6"
+    },
+    {
+      "name": "divider",
+      "value": "#DDDDDD"
+    },
+    {
+      "name": "exchange_bg",
+      "value": "#2050E0"
+    },
+    {
+      "name": "currency_bg",
+      "value": "#2050E0"
+    }
+  ]
+}

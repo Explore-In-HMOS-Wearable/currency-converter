@@ -1,0 +1,28 @@
+{
+  "routerMap": [
+    {
+      "name": "ExchangePage",
+      "pageSourceFile": "src/main/ets/pages/ExchangePage.ets",
+      "buildFunction": "ExchangePageBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    },
+    {
+      "name": "SelectCurrencyPage",
+      "pageSourceFile": "src/main/ets/pages/SelectCurrencyPage.ets",
+      "buildFunction": "SelectCurrencyPageBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    },
+    {
+      "name": "SplashPage",
+      "pageSourceFile": "src/main/ets/pages/SplashPage.ets",
+      "buildFunction": "SplashPageBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}

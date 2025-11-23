@@ -37,12 +37,12 @@ export struct SelectCurrencyPage {
     NavDestination() {
       Column() {
         Row() {
-          Blank().width("16%")
+          Blank().width('16%')
           Column() {
             Image($r('app.media.ic_arrow_left'))
               .width(25)
               .height(25)
-              .margin({ top: "19vp" })
+              .margin({ top: '19vp' })
               .onClick(() => {
                 this.triggerMechanism++;
                 this.pageInfos.pop()
@@ -61,7 +61,7 @@ export struct SelectCurrencyPage {
           })
         }
         .alignItems(VerticalAlign.Bottom)
-        .height("60vp")
+        .height('60vp')
         .width($r('app.string.w_100'))
 
         List() {

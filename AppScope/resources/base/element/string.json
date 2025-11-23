@@ -3,6 +3,10 @@
     {
       "name": "app_name",
       "value": "CurrencyConverter"
+    },
+    {
+      "name": "reason_internet",
+      "value": "Call currency rates from API."
     }
   ]
 }

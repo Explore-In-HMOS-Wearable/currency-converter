@@ -59,6 +59,10 @@
     {
       "name": "w_100",
       "value": "100%"
+    },
+    {
+      "name": "core_url",
+      "value": "api.frankfurter.app"
     }
   ]
 }

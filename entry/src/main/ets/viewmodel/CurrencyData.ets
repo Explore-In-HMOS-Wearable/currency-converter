@@ -15,3 +15,14 @@ export class CurrencyData {
     this.isSelected = isSelected
   }
 }
+
+export interface CurrencyRates {
+  amount: number;
+  base: string;
+  date: string;
+  rates: Rate[];
+}
+
+export interface Rate {
+  code: number;
+}

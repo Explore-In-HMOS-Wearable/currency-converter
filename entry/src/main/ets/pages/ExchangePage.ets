@@ -131,9 +131,11 @@ export struct ExchangePage {
               })
               .onClick(() => {
                 this.isUpdatedRates = true;
-                setTimeout(() => {
-                  this.isUpdatedRates = false;
-                }, 60000)
+                this.viewModel.fetchAndUpdateRates().then(() => {
+                  setTimeout(() => {
+                    this.isUpdatedRates = false;
+                  }, 5000)
+                })
               })
               .alignSelf(ItemAlign.Center)
               .margin({ top: 6, bottom: 6 })

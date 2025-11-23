@@ -1,4 +1,8 @@
-import { CurrencyData } from './CurrencyData';
+import { CurrencyData, CurrencyRates } from './CurrencyData';
+import { rcp } from '@kit.RemoteCommunicationKit';
+
+const API_BASE_URL = 'https://' + $r('app.string.core_url');
+const session = rcp.createSession();
 
 @Observed
 export class CurrencyViewModel {
@@ -6,8 +10,9 @@ export class CurrencyViewModel {
 
   constructor() {
     this.allCurrencyData = this.initCurrencyData();
-    this._selectedBaseCurrency = this.allCurrencyData[2]; // USD
+    this._selectedBaseCurrency = this.allCurrencyData[0]; // USD
     this._selectedTargetCurrency = this.allCurrencyData[1]; // EUR
+    this.fetchAndUpdateRates()
   }
 
   private _selectedBaseCurrency: CurrencyData;
@@ -97,6 +102,28 @@ export class CurrencyViewModel {
 
     const rate = this._selectedTargetCurrency.rate / this._selectedBaseCurrency.rate;
     const convertedAmount = parseFloat(amount) * rate;
-    return convertedAmount.toFixed(2);
+    return convertedAmount.toFixed(4);
+  }
+
+  async fetchAndUpdateRates(): Promise<void> {
+    const baseCode = 'USD'; // all calculation indexed to USD
+    const url = `${API_BASE_URL}/latest?from=${baseCode}`;
+    const request = new rcp.Request(url, 'GET');
+
+    try {
+      const response = await session.fetch(request);
+      const currencyRates: CurrencyRates = response.toJSON() as CurrencyRates;
+
+      this.allCurrencyData.forEach((currency) => {
+        if (currency.code === baseCode) {
+          currency.rate = 1.0;
+        } else {
+          currency.rate = currencyRates.rates[currency.code] || 0;
+        }
+      });
+
+    } catch (err) {
+      console.info('An error occurred.')
+    }
   }
 }

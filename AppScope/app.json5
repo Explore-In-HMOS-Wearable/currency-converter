@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.hmosdemos.currencyconverter",
+    "bundleName": "com.hmosdemos.wearable.currency_converter",
     "vendor": "hmosdemos",
     "versionCode": 1000000,
     "versionName": "1.0.0",

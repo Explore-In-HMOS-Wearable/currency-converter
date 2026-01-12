@@ -35,7 +35,7 @@ export struct ExchangePage {
     green: 80,
     blue: 224
   };
-  @State DrawingColorFilterFirst: ColorFilter | undefined =
+  @State drawingColorFilterFirst: ColorFilter | undefined =
     drawing.ColorFilter.createBlendModeColorFilter(this.color1, drawing.BlendMode.SRC_IN);
   @State isUpdatedRates: boolean = false;
 
@@ -106,7 +106,7 @@ export struct ExchangePage {
                 .backgroundColor(Color.Transparent)
                 .borderColor('000FF')
                 .foregroundColor(Color.Blue)
-                .colorFilter(this.DrawingColorFilterFirst)
+                .colorFilter(this.drawingColorFilterFirst)
                 .margin({ top: '1vp' })
                 .onClick(() => {
                   this.toggleCurrency()

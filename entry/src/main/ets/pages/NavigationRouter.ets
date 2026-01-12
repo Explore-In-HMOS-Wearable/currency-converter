@@ -31,7 +31,7 @@ struct NavigationRouter {
 
     this.getUIContext()
       .getFont()
-      .registerFont({ familyName: 'alipay_number', familySrc: $rawfile('fonts/AlipayNumber.ttf') })
+      .registerFont({ familyName: 'alipay_number', familySrc: $rawfile('fonts/alipayNumber.ttf') })
 
     this.getUIContext()
       .getFont()
@@ -71,7 +71,7 @@ struct NavigationRouter {
 
     this.getUIContext()
       .getFont()
-      .registerFont({ familyName: 'sacramento', familySrc: $rawfile('fonts/Sacramento-Regular.ttf') })
+      .registerFont({ familyName: 'sacramento', familySrc: $rawfile('fonts/sacramentoRegular.ttf') })
 
     this.getUIContext()
       .getFont()

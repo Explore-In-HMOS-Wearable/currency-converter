@@ -52,7 +52,8 @@ export struct SelectCurrencyPage {
           .width(25)
 
           SearchBar({
-            placeholder: this.getUIContext().getHostContext()?.resourceManager.getStringSync($r('app.string.search').id),
+            placeholder: this.getUIContext().getHostContext()?.resourceManager.getStringSync($r('app.string.search')
+              .id),
             color: $r('app.color.updated_bg'),
             onSearch: (value: string) => {
               this.searchQuery = value;
@@ -69,7 +70,7 @@ export struct SelectCurrencyPage {
             ListItem() {
               CurrencyItem({
                 currency: currencyData,
-                isSelected: currencyData.code == this.currentCurrencyCode,
+                isSelected: currencyData.code === this.currentCurrencyCode,
                 onItemClick: (currency: CurrencyData) => {
                   if (this.currentCurrencyType === 'base') {
                     this.viewModel.selectedBaseCurrency = currency;
@@ -93,6 +94,7 @@ export struct SelectCurrencyPage {
         .backgroundColor(Color.White)
         .layoutWeight(1)
         .width($r('app.string.w_100'))
+        .height($r('app.string.w_100'))
       }
       .height($r('app.string.w_100'))
       .width($r('app.string.w_100'))

@@ -1,7 +1,7 @@
 import { CurrencyData, CurrencyRates } from './CurrencyData';
 import { rcp } from '@kit.RemoteCommunicationKit';
 
-const API_BASE_URL = 'https://' + $r('app.string.core_url');
+const API_BASE_URL = `https://` + $r('app.string.core_url');
 const session = rcp.createSession();
 
 @Observed
@@ -66,7 +66,7 @@ export class CurrencyViewModel {
       new CurrencyData('KRW', 'South Korean Won',
         $r('app.media.flag_krw'), '₩', 1310.50),
       new CurrencyData('RUB', 'Russian Ruble',
-        $r('app.media.flag_rub'), '₽', 92.76),
+        $r('app.media.flag_rub'), '₽', 92.76)
     ];
   }
 
